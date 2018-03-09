@@ -4,8 +4,9 @@ function randomQuote() {
       dataType: "jsonp",
       data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
       success: function( response ) {
-        $("#random_quote").html("<p id='random_quote' class='center'>" +
-          response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
+        $("#random_quote").html("<p id='random_quote' class='center' class='quoteText'>" +
+          response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>").hide().fadeIn(2000);
+
     	}
 
 	})
